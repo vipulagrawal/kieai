@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kie-video"
+version = "0.1.0"
+description = "Generate and download videos with the Kie.ai API."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit>=1.50,<2",
+]
+
+[project.scripts]
+kie-video = "kie_video.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["kie_video*"]
